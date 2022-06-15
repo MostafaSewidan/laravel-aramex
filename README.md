@@ -33,7 +33,7 @@ This repo is a full rebuild of DigitalCloud/aramex.
 
 Run the following command to install the latest applicable version of the package: 
     
-    composer require extremesa/aramex
+    composer require tocaan/aramex
 
 You can publish the config-file with:
 
