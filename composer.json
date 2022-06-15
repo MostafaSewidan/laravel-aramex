@@ -1,19 +1,15 @@
 {
-    "name": "extremesa/aramex",
+    "name": "tocaan/aramex",
     "description": "Integrate Laravel project with Aramex.",
     "keywords": [
     ],
     "authors": [
         {
-            "name": "Ismail Ashour",
-            "email": "iashour@extreme.sa"
+            "name": "Tocaan",
+            "email": "aramex@tocaan.com"
         }
     ],
     "license": "MIT",
-    "require": {
-        "php": ">=7.1.0",
-        "laravel/framework": "^5.8"
-    },
     "autoload": {
         "psr-4": {
             "ExtremeSa\\Aramex\\": "src/"
