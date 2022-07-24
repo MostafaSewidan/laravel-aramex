@@ -20,5 +20,7 @@ class ShippingAbstract extends API implements Normalize
         parent::__construct();
         $this->live_wsdl = $this->live_wsdl . '/shippingapi.v2/shipping/service_1_0.svc?wsdl';
         $this->test_wsdl = $this->test_wsdl . '/shippingapi.v2/shipping/service_1_0.svc?wsdl';
+
+        $this->soapClient = new \SoapClient($this->getWsdlAccordingToEnvironment(), array('trace' => 1));
     }
 }
