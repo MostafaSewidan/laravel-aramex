@@ -14,11 +14,8 @@ use ExtremeSa\Aramex\API\Response\Location\AddressValidationResponse;
  * Class ValidateAddress
  * @package ExtremeSa\Aramex\API\Requests\Location
  */
-class ValidateAddress extends API implements Normalize
+class ValidateAddress extends LocationAbstract implements Normalize
 {
-    protected $live_wsdl = 'https://ws.aramex.net/shippingapi.v2/location/service_1_0.svc?wsdl';
-    protected $test_wsdl = 'https://ws.aramex.net/shippingapi.v2/location/service_1_0.svc?wsdl';
-
     private $address;
 
     /**

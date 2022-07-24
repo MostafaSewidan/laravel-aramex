@@ -3,7 +3,6 @@
 namespace ExtremeSa\Aramex\API\Requests\Location;
 
 use ExtremeSa\Aramex\API\Interfaces\Normalize;
-use ExtremeSa\Aramex\API\Requests\API;
 use ExtremeSa\Aramex\API\Response\Location\CountriesFetchingResponse;
 
 /**
@@ -12,11 +11,8 @@ use ExtremeSa\Aramex\API\Response\Location\CountriesFetchingResponse;
  * Class FetchCountries
  * @package ExtremeSa\Aramex\API\Requests\Location
  */
-class FetchCountries extends API implements Normalize
+class FetchCountries extends LocationAbstract implements Normalize
 {
-    protected $live_wsdl = 'https://ws.aramex.net/shippingapi.v2/location/service_1_0.svc?wsdl';
-    protected $test_wsdl = 'https://ws.aramex.net/shippingapi.v2/location/service_1_0.svc?wsdl';
-
     /**
      * @return CountriesFetchingResponse
      * @throws \Exception

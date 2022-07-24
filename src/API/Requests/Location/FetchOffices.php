@@ -14,13 +14,10 @@ use ExtremeSa\Aramex\API\Response\Location\OfficesFetchingResponse;
  * Class FetchOffices
  * @package ExtremeSa\Aramex\API\Requests\Location
  */
-class FetchOffices extends API implements Normalize
+class FetchOffices extends LocationAbstract implements Normalize
 {
-    protected $live_wsdl = 'https://ws.aramex.net/shippingapi.v2/location/service_1_0.svc?wsdl';
-    protected $test_wsdl = 'https://ws.aramex.net/shippingapi.v2/location/service_1_0.svc?wsdl';
-
     private $countryCode;
-
+    
     /**
      * @return OfficesFetchingResponse
      * @throws Exception

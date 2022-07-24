@@ -4,7 +4,6 @@ namespace ExtremeSa\Aramex\API\Requests\Shipping;
 
 use Exception;
 use ExtremeSa\Aramex\API\Interfaces\Normalize;
-use ExtremeSa\Aramex\API\Requests\API;
 use ExtremeSa\Aramex\API\Response\Shipping\LastReservedShipmentNumberRangeResponse;
 
 /**
@@ -13,11 +12,8 @@ use ExtremeSa\Aramex\API\Response\Shipping\LastReservedShipmentNumberRangeRespon
  * Class LastReserveShipmentNumberRange
  * @package ExtremeSa\Aramex\API\Requests
  */
-class GetLastShipmentsNumbersRange extends API implements Normalize
+class GetLastShipmentsNumbersRange extends ShippingAbstract implements Normalize
 {
-    protected $live_wsdl = 'https://ws.aramex.net/shippingapi.v2/shipping/service_1_0.svc?wsdl';
-    protected $test_wsdl = 'https://ws.aramex.net/shippingapi.v2/shipping/service_1_0.svc?wsdl';
-
     private $entity;
     private $productGroup;
 

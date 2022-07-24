@@ -1,6 +1,9 @@
 <?php
 
 return [
+    'live_url' => env('ARAMEX_LIVE_URL', "https://ws.aramex.net"),
+    'dev_url' => env('ARAMEX_DEV_URL', "https://ws.dev.aramex.net"),
+    
     'mode' => env('ARAMEX_MODE', 'test'),
 
     'test' => [

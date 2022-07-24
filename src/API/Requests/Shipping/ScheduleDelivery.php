@@ -6,7 +6,6 @@ use Exception;
 use ExtremeSa\Aramex\API\Classes\Address;
 use ExtremeSa\Aramex\API\Classes\ScheduledDelivery;
 use ExtremeSa\Aramex\API\Interfaces\Normalize;
-use ExtremeSa\Aramex\API\Requests\API;
 use ExtremeSa\Aramex\API\Response\Shipping\ScheduledDeliveryResponse;
 
 /**
@@ -15,11 +14,8 @@ use ExtremeSa\Aramex\API\Response\Shipping\ScheduledDeliveryResponse;
  * Class ScheduledDelivery
  * @package ExtremeSa\Aramex\API\Requests
  */
-class ScheduleDelivery extends API implements Normalize
+class ScheduleDelivery extends ShippingAbstract implements Normalize
 {
-    protected $live_wsdl = 'https://ws.aramex.net/shippingapi.v2/shipping/service_1_0.svc?wsdl';
-    protected $test_wsdl = 'https://ws.aramex.net/shippingapi.v2/shipping/service_1_0.svc?wsdl';
-
     private $address;
     private $scheduledDelivery;
     private $shipmentNumber;

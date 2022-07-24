@@ -17,11 +17,8 @@ use ExtremeSa\Aramex\API\Response\Shipping\LabelPrintingResponse;
  * Class PrintLabel
  * @package ExtremeSa\Aramex\API\Requests
  */
-class PrintLabel extends API implements Normalize
+class PrintLabel extends ShippingAbstract implements Normalize
 {
-    protected $live_wsdl = 'https://ws.aramex.net/shippingapi.v2/shipping/service_1_0.svc?wsdl';
-    protected $test_wsdl = 'https://ws.aramex.net/shippingapi.v2/shipping/service_1_0.svc?wsdl';
-
     private $shipmentNumber;
     private $productGroup;
     private $originEntity;

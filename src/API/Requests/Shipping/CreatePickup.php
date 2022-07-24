@@ -6,7 +6,6 @@ use Exception;
 use ExtremeSa\Aramex\API\Classes\LabelInfo;
 use ExtremeSa\Aramex\API\Classes\Pickup;
 use ExtremeSa\Aramex\API\Interfaces\Normalize;
-use ExtremeSa\Aramex\API\Requests\API;
 use ExtremeSa\Aramex\API\Response\Shipping\PickupCreationResponse;
 
 /**
@@ -16,11 +15,8 @@ use ExtremeSa\Aramex\API\Response\Shipping\PickupCreationResponse;
  * Class PickupCreation
  * @package ExtremeSa\Aramex\API\Requests
  */
-class CreatePickup extends API implements Normalize
+class CreatePickup extends ShippingAbstract implements Normalize
 {
-    protected $live_wsdl = 'https://ws.aramex.net/shippingapi.v2/shipping/service_1_0.svc?wsdl';
-    protected $test_wsdl = 'https://ws.aramex.net/shippingapi.v2/shipping/service_1_0.svc?wsdl';
-
     private $pickup;
     private $labelInfo;
 

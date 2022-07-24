@@ -18,12 +18,16 @@ abstract class API implements Normalize
     protected $transaction;
     protected $test_wsdl;
     protected $live_wsdl;
+    protected $url;
     protected $environment;
 
     public function __construct()
     {
-        config('aramex.mode') === 'live' ? $this->useLiveAsEnvironment() : $this->useTestAsEnvironment();
 
+        $this->test_wsdl = config('aramex.dev_url');
+        $this->live_wsdl = config('aramex.live_url');
+        config('aramex.mode') === 'live' ? $this->useLiveAsEnvironment() : $this->useTestAsEnvironment();
+        
         $this->fillClientInfoFromEnv();
 
         $this->soapClient = new \SoapClient($this->getWsdlAccordingToEnvironment(), array('trace' => 1));
