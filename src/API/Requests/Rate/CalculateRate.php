@@ -8,26 +8,15 @@ use ExtremeSa\Aramex\API\Classes\Address;
 use ExtremeSa\Aramex\API\Classes\ShipmentDetails;
 use ExtremeSa\Aramex\API\Interfaces\Normalize;
 use ExtremeSa\Aramex\API\Requests\API;
+use ExtremeSa\Aramex\API\Requests\Shipping\ShippingAbstract;
 use ExtremeSa\Aramex\API\Response\Rate\RateCalculatorResponse;
 
-class CalculateRate extends API implements Normalize
+class CalculateRate extends ShippingAbstract implements Normalize
 {
     private $originalAddress;
     private $destinationAddress;
     private $shipmentDetails;
     private $preferredCurrencyCode;
-
-    protected $live_wsdl = 'https://ws.aramex.net/ShippingAPI.V2/RateCalculator/Service_1_0.svc?wsdl';
-    protected $test_wsdl = 'https://ws.aramex.net/ShippingAPI.V2/RateCalculator/Service_1_0.svc?wsdl';
-
-    public function __construct()
-    {
-        parent::__construct();
-        $this->live_wsdl = $this->live_wsdl . '/ShippingAPI.V2/RateCalculator/Service_1_0.svc?wsdl';
-        $this->test_wsdl = $this->test_wsdl . '/ShippingAPI.V2/RateCalculator/Service_1_0.svc?wsdl';
-
-        $this->soapClient = new \SoapClient($this->getWsdlAccordingToEnvironment(), array('trace' => 1));
-    }
 
     /**
      * @return RateCalculatorResponse
