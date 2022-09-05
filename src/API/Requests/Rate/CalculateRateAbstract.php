@@ -18,8 +18,8 @@ class CalculateRateAbstract extends API implements Normalize
     public function __construct()
     {
         parent::__construct();
-        $this->live_wsdl = $this->live_wsdl . '/shippingapi.v2/ratecalculator/service_1_0.svc?wsdl';
-        $this->test_wsdl = $this->test_wsdl . '/shippingapi.v2/location/service_1_0.svc?wsdl';
+        $this->live_wsdl = $this->live_wsdl . '/ShippingAPI.V2/RateCalculator/Service_1_0.svc?wsdl';
+        $this->test_wsdl = $this->test_wsdl . '/ShippingAPI.V2/RateCalculator/Service_1_0.svc?wsdl';
 
         $this->soapClient = new \SoapClient($this->getWsdlAccordingToEnvironment(), array('trace' => 1));
     }
