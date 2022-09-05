@@ -7,11 +7,9 @@ use Exception;
 use ExtremeSa\Aramex\API\Classes\Address;
 use ExtremeSa\Aramex\API\Classes\ShipmentDetails;
 use ExtremeSa\Aramex\API\Interfaces\Normalize;
-use ExtremeSa\Aramex\API\Requests\API;
-use ExtremeSa\Aramex\API\Requests\Shipping\ShippingAbstract;
 use ExtremeSa\Aramex\API\Response\Rate\RateCalculatorResponse;
 
-class CalculateRate extends ShippingAbstract implements Normalize
+class CalculateRate extends CalculateRateAbstract implements Normalize
 {
     private $originalAddress;
     private $destinationAddress;
